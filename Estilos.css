@@ -1,0 +1,1107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (min-width: 320px){
+  .navbar {
+    background-color: #1b1b1b;
+    padding: 0.2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 0.1rem solid #6a4b28;
+  }
+
+  .logo-navbar {
+    height: 2.5rem;
+    width: auto;
+  }
+
+  .banner-sherlock {
+    color: #f5c518;
+    height: 60vh;
+    background: url('./Imagenes/banner.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .banner-sherlock p {
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+    text-shadow: 0 2em 8em rgba(0,0,0,0.85), 0 0 2em #080808;
+    margin-top: 2rem;
+  }
+
+  .Sherlock {
+    font-size: 4rem;
+    color: #ddad10;
+    font-family: 'DM';
+    text-shadow: #080808 2em 4em 6em;
+  }
+
+  .banner-sherlock h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    text-shadow: 0 2em 8em rgba(0,0,0,0.85), 0 0 2em #080808;
+  }
+
+
+
+  #Seccion1 {
+    position: relative;
+    padding: 2rem 1rem;
+    background-color: #1b1b1b;
+    border-top: 0.1rem solid #a67c52;
+    border-bottom: 0.1rem solid #a67c52;
+  }
+
+  #Seccion1::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  #padre-contenedor {
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  #padre-contenedor .SherlockH {
+    font-size: 3rem;
+    color: #ddad10;
+    font-family: 'DM';
+    text-shadow: #080808 2em 4em 6em;
+  }
+
+  .simple {
+    background: url(Imagenes/separador.webp) no-repeat center center;
+    background-size: contain;
+    height: 3rem;
+    width: 100%;
+    min-width: 10rem;
+    max-width: 100%;
+  }
+
+  hr {
+    margin: 1rem 0;
+    height: 0.1rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+  }
+
+  #padre-contenedor p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 0.5em;
+    color: #f1f1f1;
+    text-shadow: 0 0 5em rgba(0,0,0,0.7);
+  }
+
+  .parrafo2 {
+    display: none;
+  }
+
+
+
+  #Pruebascript {
+    min-height: 100vh;
+    background: linear-gradient(rgba(42, 17, 17, 0.5), black), url('./Imagenes/Living.jpg') center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .SherlockH {
+    color: #ddad10;
+    font-family: 'DM';
+    font-size: 3rem;
+    text-shadow: #080808 2em 4em 6em;
+    text-align: center;
+  }
+
+  #Pruebascript .simple {
+    background: url(./Imagenes/separador.webp) no-repeat center center;
+    height: 3rem;
+    width: 100%;
+    min-width: 10rem;
+    max-width: 100%;
+  }
+
+  #Pruebascript img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .fade-left, .fade-right {
+    opacity: 0;
+    transition: all 1s ease-out;
+    margin: 2rem 0;
+  }
+
+  .fade-left {
+    transform: translateX(-01em);
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .fade-right {
+    transform: translateX(0.5em);
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .fade-left.show, .fade-right.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+
+
+  #Actores{
+    font-size:1.2rem;
+    font-weight:700; 
+    color:var(--brand); 
+    padding: 2rem;
+    background-image: linear-gradient(to top, rgb(73, 1, 1), black);
+  }
+
+  #Actores .simple {
+    background: url(./Imagenes/separador.webp) no-repeat center center;
+    height: 3rem;
+    width: 100%;
+    min-width: 10rem;  
+    max-width: 100%;
+  }
+
+  .cards-container1, .cards-container2 {
+    align-content: center;
+    display: flex;
+    gap: 2rem; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+  }
+
+  .cards-container1 {
+    margin-bottom: 2rem; 
+  }
+
+  .card {
+    width: 20rem;
+    height: 27rem;
+    perspective: 100rem; 
+  }
+
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 8rem 18rem rgba(0,0,0,0.5);
+  }
+
+  .card-front {
+    background: #000;
+  }
+
+  .card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-back {
+    background: #222;
+    color: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    text-align: center;
+  }
+
+  .card-back h2 {
+    margin-bottom: 5em;
+  }
+
+  .card-back p {
+    font-size: 1em;
+    line-height: 1.4;
+  }
+
+
+
+  .carrusel {
+    width: 90%;
+    height: auto;
+    overflow-x: auto;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    gap: 3em;
+    scroll-behavior: smooth;
+    anchor-name: --carrusel;
+    scroll-snap-type: x mandatory;
+  }
+
+  .carrusel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carrusel::scroll-button(right) {
+    content: '→';
+    border: none;
+    background-color: #c0a36e;
+    font-family: Consolas;
+    font-size: 3rem;
+    color: white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    padding-bottom: 0.1em;
+    cursor: pointer;
+    position: fixed;
+    position-anchor: --carrusel;
+    position-area: right center;
+    translate: -80%;
+  }
+
+  .carrusel::scroll-button(left) {
+    content: '←';
+    border: none;
+    background-color: #c0a36e;
+    font-family: Consolas;
+    font-size: 3rem;
+    color: white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    padding-bottom: 0.1em;
+    cursor: pointer;
+    position: fixed;
+    position-anchor: --carrusel;
+    position-area: left center;
+    translate: 80%;
+  }
+
+  .carrusel::scroll-button(right):disabled, .carrusel::scroll-button(left):disabled {
+    opacity: 0.5;
+    cursor: auto;
+  }
+
+  #Seccion4 {
+    background-color: rgb(73, 1, 1);
+  }
+
+  #Seccion4 .SherlockH {
+    color: #ddad10;
+    font-family: 'DM';
+    font-size: 2.5rem;
+    text-shadow: #080808 2em 4em 6em;
+  }
+
+  #Seccion4 p {
+    text-align: center;
+    font-family: 'Roboto';
+    color: white;
+    font-size: 1.3rem;
+  }
+
+  #Seccion4 .card {
+    scroll-snap-align: start;
+    flex: 0 0 18em;
+    height: 30em;
+    width: 10em;
+    background-color: rgb(204, 204, 204);
+    padding: 0.2em;
+    border-radius: 1.5em;
+    text-align: center;
+    align-content: center;
+  }
+
+  #Seccion4 .card img {
+    max-width: 80%;      
+    height: auto;         
+    object-fit: cover;
+    margin-bottom: 0.5em;
+  }
+
+  #Seccion4 .card h2 {
+    font-size: 1.1em;    
+    margin: 0.3em 0;
+  }
+
+  #Seccion4 .card p {
+    font-size: 0.95em;
+    color: #000;   
+  }
+
+
+
+  .footer {
+    background-color: #1b1b1b;
+    border-top: 0.2rem solid #6a4b28;
+    padding: 1rem 0;
+    text-align: center;
+    font-family: "Georgia", serif;
+  }
+
+  .footer-content-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer .redes {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+  }
+
+  .footer .link {
+    width: 2rem;
+    height: 2rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: sepia(60%) contrast(90%) brightness(90%);
+  }
+
+  .footer img{
+    height: 2em;
+    width: 2em;
+  }
+
+  .footer .link img:hover {
+    transform: scale(1.2);
+    filter: sepia(20%) contrast(110%) brightness(110%) drop-shadow(0 0 6em #a67c52);
+  }
+
+  .footer a {
+    text-decoration: none;
+  }
+
+  .footer p {
+    display: block;
+    margin-top: 0.5em;
+    font-size: 1em;
+    color: #c0a36e;
+    font-style: italic;
+  }
+}
+
+
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .banner-sherlock p {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
+    text-shadow: 0 2em 8em rgba(0,0,0,0.85), 0 0 2em #080808;
+    margin-top: 5rem;
+  }
+
+  .Sherlock {
+    font-size: 6rem;
+    color: #ddad10;
+    font-family: 'DM';
+    text-shadow: #080808 2em 4em 6em;
+  }
+
+  .banner-sherlock h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 0 2em 8em rgba(0,0,0,0.85), 0 0 2em #080808;
+  }
+
+
+
+  #Seccion1 {
+    background-color: #1b1b1b;
+    border-top: 0.2rem solid #a67c52;
+    border-bottom: 0.2rem solid #a67c52;
+    position: relative;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  #padre-contenedor {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+  }
+
+  #padre-contenedor .SherlockH {
+    color: #ddad10;
+    font-family: 'DM';
+    text-shadow: 2em 4em 6em #080808;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .simple {
+    background: url(./Imagenes/separador.webp) no-repeat center center;
+    background-size: contain;
+    height: 3rem;
+    width: 100%;
+    min-width: 10rem;
+    max-width: 100%;
+  }
+
+  hr {
+    box-sizing: content-box;
+    border: none;
+    height: 0.2rem;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  #padre-contenedor p {
+   font-size: 1.2rem;
+   margin: 1rem auto;
+   text-align: left;
+   line-height: 1.6;
+  }
+
+  .parrafo2 {
+   display: none;
+  }
+
+
+
+  .carrusel {
+    width: 90%;
+    height: auto;
+    overflow-x: auto;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    gap: 3em;
+    scroll-behavior: smooth;
+    anchor-name: --carrusel;
+    scroll-snap-type: x mandatory;
+  }
+
+  .carrusel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carrusel::scroll-button(right) {
+    content: '→';
+    border: none;
+    background-color: #c0a36e;
+    font-family: Consolas;
+    font-size: 3rem;
+    color: white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    padding-bottom: 0.1em;
+    cursor: pointer;
+    position: fixed;
+    position-anchor: --carrusel;
+    position-area: right center;
+    translate: -80%;
+  }
+
+  .carrusel::scroll-button(left) {
+    content: '←';
+    border: none;
+    background-color: #c0a36e;
+    font-family: Consolas;
+    font-size: 3rem;
+    color: white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    padding-bottom: 0.1em;
+    cursor: pointer;
+    position: fixed;
+    position-anchor: --carrusel;
+    position-area: left center;
+    translate: 80%;
+  }
+
+  .carrusel::scroll-button(right):disabled, .carrusel::scroll-button(left):disabled {
+    opacity: 0.5;
+    cursor: auto;
+  }
+
+  #Seccion4 {
+    background-color: rgb(73, 1, 1);
+  }
+
+  #Seccion4 .SherlockH {
+    color: #ddad10;
+    font-family: 'DM';
+    font-size: 2.5rem;
+    text-shadow: #080808 2em 4em 6em;
+  }
+
+  #Seccion4 p {
+    text-align: center;
+    font-family: 'Roboto';
+    color: white;
+    font-size: 1.3rem;
+  }
+
+  #Seccion4 .card {
+    scroll-snap-align: start;
+    flex: 0 0 20em;
+    height: 30em;
+    width: 10em;
+    background-color: rgb(204, 204, 204);
+    padding: 0.2em;
+    border-radius: 1.5em;
+    text-align: center;
+    align-content: center;
+  }
+
+  #Seccion4 .card img {
+    max-width: 80%;      
+    height: auto;         
+    object-fit: cover;
+    margin-bottom: 0.5em;
+  }
+
+  #Seccion4 .card h2 {
+    font-size: 1.1em;    
+    margin: 0.3em 0;
+  }
+
+  #Seccion4 .card p {
+    font-size: 0.95em;
+    color: #000;   
+  }
+
+
+
+  .footer {
+    background-color: #1b1b1b;
+    border-top: 0.2rem solid #6a4b28;
+    padding: 1rem 0;
+    text-align: center;
+    font-family: "Georgia", serif;
+  }
+
+  .footer-content-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer .redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .footer .link {
+    width: 2rem;
+    height: 2rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: sepia(60%) contrast(90%) brightness(90%);
+  }
+
+  .footer .link img:hover {
+    transform: scale(1.2);
+    filter: sepia(20%) contrast(110%) brightness(110%) drop-shadow(0 0 6em #a67c52);
+  }
+
+  .footer a {
+    text-decoration: none;
+  }
+
+  .footer p {
+    display: block;
+    margin-top: 0.5em;
+    font-size: 1em;
+    color: #c0a36e;
+    font-style: italic;
+  }
+}
+
+
+
+@media (min-width: 1025px){
+  .navbar {
+    background-color: #1b1b1b;
+    padding: 0.5rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 0.2rem solid #6a4b28;
+  }
+
+  .logo-navbar {
+    height: 3rem;
+    width: auto;
+    display: block;
+  }
+
+
+  .banner-sherlock {
+    color: #f5c518;
+    max-width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    text-align: center;
+    background: url('./Imagenes/banner.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner-sherlock p {
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 600;
+    text-shadow:  0 2em 8em rgba(0,0,0,0.85), 0 0 2em #080808;
+    margin-top: 1rem;
+    
+  }
+
+  .parrafo2 {
+    display: block;
+  }
+
+  .Sherlock {
+    color: #ddad10;
+    font-family: 'DM';
+    font-size: 8rem;
+    text-shadow: #080808 2em 4em 6em;
+  }
+
+  .banner-sherlock h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow:  0 2em 8em rgba(0,0,0,0.85),0 0 2em #080808;
+  }
+
+
+
+  #Seccion1 {
+    position: relative;
+    padding: 5rem 20rem;
+    background-color: #1b1b1b;
+    border-top: 0.2rem solid #a67c52;
+    border-bottom: 0.2rem solid #a67c52;
+    overflow: hidden;
+  }
+
+  #Seccion1::before {
+    content: "";
+    position: absolute;
+    inset: 0; 
+    z-index: 0;
+  }
+
+  #padre-contenedor .SherlockH {
+    color: #ddad10;
+    font-family: 'DM';
+    font-size: 4rem;
+    text-shadow: #080808 2em 4em 6em;
+  }
+
+  .simple {
+    background: url(./Imagenes/separador.webp) no-repeat center center;
+    height: 3rem;
+    width: 100%;
+    min-width: 20rem;  
+    max-width: 80rem;
+  }
+
+  hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: none;
+    height: 0.2rem;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  #padre-contenedor {
+    position: relative;
+    z-index: 1; 
+    max-width: 200rem;
+    margin: 0 auto;
+    align-content: center;
+    text-align: center;
+  }
+
+  #padre-contenedor p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 0.5em;
+    color: #f1f1f1;
+    text-shadow: 0 0 5em rgba(0,0,0,0.7);
+  }
+
+
+
+  .SherlockH {
+    color: #ddad10;
+    font-family: 'DM';
+    font-size: 4rem;
+    text-shadow: #080808 2em 4em 6em;
+    text-align: center;
+  }
+
+  #Pruebascript .simple {
+    background: url(./Imagenes/separador.webp) no-repeat center center;
+    height: 3rem;
+    width: 100%;
+    min-width: 20rem;  
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #Pruebascript {
+    min-height: 100vh;
+    background: linear-gradient(rgb(42, 17, 17,0.5), black), url('./Imagenes/Living.jpg') center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10vh;
+  }
+
+  .fade-left, .fade-right {
+    opacity: 0;
+    transition: all 1s ease-out;
+    margin: 5rem 0;
+    display: block;
+  }
+
+  .fade-left {
+    transform: translateX(-10em);
+    margin-left: 10rem;
+    margin-right: auto;
+    display: block;
+  }
+
+  .fade-right {
+    transform: translateX(5em);
+    margin-left: auto;
+    margin-right: 10rem;
+    display: block;
+  }
+
+  .fade-left.show, .fade-right.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  #Pruebascript img {
+    max-width: 38em;
+  }
+
+
+
+  #Actores{
+    font-size:1.2rem;
+    font-weight:700; 
+    color:var(--brand); 
+    padding: 2rem;
+    background-image: linear-gradient(to top, rgb(73, 1, 1), black);
+  }
+
+  .SherlockH {
+    color: #ddad10;
+    font-family: 'DM';
+    font-size: 4rem;
+    text-shadow: #080808 2em 4em 6em;
+    text-align: center;
+  }
+
+  #Actores .simple {
+    background: url(./Imagenes/separador.webp) no-repeat center center;
+    height: 3rem;
+    width: 100%;
+    min-width: 20rem;  
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cards-container1, .cards-container2 {
+    align-content: center;
+    display: flex;
+    gap: 5rem; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+  }
+
+  .cards-container1 {
+    margin-bottom: 2rem; 
+  }
+
+  .card {
+    width: 20rem;
+    height: 30rem;
+    perspective: 100rem; 
+  }
+
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 8rem 18rem rgba(0,0,0,0.5);
+  }
+
+  .card-front {
+    background: #000;
+  }
+
+  .card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-back {
+    background: #222;
+    color: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    text-align: center;
+  }
+
+  .card-back h2 {
+    margin-bottom: 5em;
+  }
+
+  .card-back p {
+    font-size: 1em;
+    line-height: 1.4;
+  }
+
+
+  
+  .carrusel {
+    width: 57%;
+    height: auto;
+    overflow-x: auto;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    gap: 3em;
+    scroll-behavior: smooth;
+    anchor-name: --carrusel;
+    scroll-snap-type: x mandatory;
+  }
+
+  .carrusel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carrusel::scroll-button(right) {
+    content: '→';
+    border: none;
+    background-color: #c0a36e;
+    font-family: Consolas;
+    font-size: 3rem;
+    color: white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    padding-bottom: .1em;
+    cursor: pointer;
+    position: fixed;
+    position-anchor: --carrusel;
+    position-area: right center;
+    translate: 104%;
+  }
+
+  .carrusel::scroll-button(left) {
+    content: '←';
+    border: none;
+    background-color: #c0a36e;
+    font-family: Consolas;
+    font-size: 3rem;
+    color: white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    padding-bottom: .1em;
+    cursor: pointer;
+    position: fixed;
+    position-anchor: --carrusel;
+    position-area: left center;
+    translate: -105%;
+  }
+
+  .carrusel::scroll-button(right):disabled, .carrusel::scroll-button(left):disabled {
+    opacity: 0.5;
+    cursor: auto;
+  }
+
+  #Seccion4 {
+    background-color: rgb(73, 1, 1);
+  }
+
+  #Seccion4 .SherlockH {
+    color: #ddad10;
+    font-family: 'DM';
+    font-size: 4rem;
+    text-shadow: #080808 2em 4em 6em;
+    text-align: center;
+  }
+
+  #Seccion4 p {
+    text-align: center;
+    font-family: 'Roboto';
+    color: white;
+    font-size: 1.3rem;
+  }
+
+  #Seccion4 .card {
+    scroll-snap-align: start;
+    flex: 0 0 20em;
+    height: 26em;
+    background-color: rgb(204, 204, 204);
+    padding: 0.20em;
+    border-radius: .5em;
+    text-align: center;
+    align-content: center;
+  }
+
+  #Seccion4 .card img {
+    max-width: 80%;      
+    height: auto;         
+    object-fit: cover;
+    margin-bottom: 0.5em;
+  }
+
+  #Seccion4 .card h2 {
+    font-size: 1.1em;    
+    margin: 0.3em 0;
+  }
+
+  #Seccion4 .card p {
+    font-size: 0.95em;
+    color: #000;   
+  }
+
+
+
+  .footer {
+    background-color: #1b1b1b;
+    border-top: 0.2rem solid #6a4b28;
+    padding: 1rem 0;
+    text-align: center;
+    font-family: "Georgia", serif;
+  }
+
+  .footer-content-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer .redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .footer .link {
+    width: 2rem;
+    height: 2rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: sepia(60%) contrast(90%) brightness(90%);
+  }
+
+  .footer .link img:hover {
+    transform: scale(1.2);
+    filter: sepia(20%) contrast(110%) brightness(110%) drop-shadow(0 0 6em #a67c52);
+  }
+
+  .footer a {
+    text-decoration: none;
+  }
+
+  .footer p {
+    display: block;
+    margin-top: 0.5em;
+    font-size: 1em;
+    color: #c0a36e;
+    font-style: italic;
+  }
+}
